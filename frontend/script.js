@@ -132,7 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
           const cellText = document.createTextNode(
             `${chordsData[getRootNote()].fingering[j]}`
           );
-          console.log(`${chordsData[getRootNote()].fingering[j]}`);
           cell.appendChild(cellText);
           row.appendChild(cell);
         }
