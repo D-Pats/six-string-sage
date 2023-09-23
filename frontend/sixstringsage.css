@@ -3,3 +3,17 @@ body {
     padding: 0;
     background-color: darkgray
 }
+
+.banner {
+    background-color: seagreen;
+    text-align: center;
+    font-family: Helvetica, sans-serif;
+    padding: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#content{
+    color: white;
+    font-size: large;
+}
