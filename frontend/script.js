@@ -94,29 +94,26 @@ document.addEventListener("DOMContentLoaded", function () {
     "G#",
   ];
 
+  const allStrings = ["e", "B", "G", "D", "A", "E"];
+
   //Functions
 
-  function createFingeringChart() {
+  function getRootNote() {
     let rootNote = 0;
     for (let noteIndex = 0; noteIndex < allNotes.length; noteIndex++) {
       if (chordSelect.value === allNotes[noteIndex]) {
         rootNote = noteIndex;
-        console.log(noteIndex);
       }
+      return rootNote;
     }
-    chordFingeringWrite.textContent = chordsData[rootNote].fingering;
+  }
+
+  function createFingeringChart() {
+    chordFingeringWrite.textContent = chordsData[getRootNote()].fingering;
   }
 
   function createTextChord() {
-    let rootNote = 0;
-    for (let noteIndex = 0; noteIndex < allNotes.length; noteIndex++) {
-      if (chordSelect.value === allNotes[noteIndex]) {
-        rootNote = noteIndex;
-        console.log(noteIndex);
-      }
-    }
-
-    chordNotesWrite.textContent = chordsData[rootNote].scaleNotes;
+    chordNotesWrite.textContent = chordsData[getRootNote()].scaleNotes;
   }
 
   //Event listeners
