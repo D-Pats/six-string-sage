@@ -94,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
     "G#",
   ];
 
+  //Functions
+
   function createFingeringChart() {
     let rootNote = 0;
     for (let noteIndex = 0; noteIndex < allNotes.length; noteIndex++) {
@@ -102,9 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(noteIndex);
       }
     }
-    chordFingeringWrite.textContent = chordsData[rootNote].fingering.map(
-      (fret) => fret
-    );
+    chordFingeringWrite.textContent = chordsData[rootNote].fingering;
   }
 
   function createTextChord() {
@@ -116,15 +116,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
-    chordNotesWrite.textContent = chordsData[rootNote].scaleNotes.map(
-      (note) => note
-    );
+    chordNotesWrite.textContent = chordsData[rootNote].scaleNotes;
   }
 
+  //Event listeners
+
+  //Event listener to change the fingering and notes for scale that show when selecting different root notes from the dropdown
   chordSelect.addEventListener("change", function () {
     createFingeringChart();
     createTextChord();
   });
+
+  //Running functions on initial load
   createFingeringChart();
   createTextChord();
 });
