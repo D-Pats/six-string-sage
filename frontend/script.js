@@ -110,6 +110,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function createFingeringChart() {
     //https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces
+
+    // removes existing table if switching chords
+    chordFingeringWrite.textContent = "";
+
     // creates a <table> element and a <tbody> element
     const tbl = document.createElement("table");
     const tblBody = document.createElement("tbody");
