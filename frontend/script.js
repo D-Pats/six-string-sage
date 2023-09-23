@@ -104,8 +104,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (chordSelect.value === allNotes[noteIndex]) {
         rootNote = noteIndex;
       }
-      return rootNote;
     }
+    return rootNote;
   }
 
   function createFingeringChart() {
@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const cellText = document.createTextNode(
             `${chordsData[getRootNote()].fingering[j]}`
           );
+          console.log(`${chordsData[getRootNote()].fingering[j]}`);
           cell.appendChild(cellText);
           row.appendChild(cell);
         }
@@ -157,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //Event listener to change the fingering and notes for scale that show when selecting different root notes from the dropdown
   chordSelect.addEventListener("change", function () {
+    getRootNote();
     createFingeringChart();
     createTextChord();
   });
