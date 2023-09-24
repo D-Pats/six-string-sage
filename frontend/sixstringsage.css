@@ -1,11 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: darkgray
+    background-color: #504B43
 }
 
 .banner {
-    background-color: seagreen;
+    background-color: #7DBA84;
     text-align: center;
     font-family: Helvetica, sans-serif;
     padding: 10px;
@@ -14,12 +14,17 @@ body {
 }
 
 #content{
-    color: white;
+    color: orange;
     font-size: 40px;
+    margin-left: 3%;
 }
 
 #in-scale {
-    background-color: black;
-    color: black;
+    background-color: orange;
+    color: orange;
     min-width: 50px;
+}
+
+td {
+    background-color: #504B43;
 }
