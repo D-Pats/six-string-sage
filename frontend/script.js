@@ -257,30 +257,80 @@ document.addEventListener("DOMContentLoaded", function () {
           cell.appendChild(cellText);
           row.appendChild(cell);
         } else if ((i === 1 || i === 6) && j > 0) {
-          const cellText = document.createTextNode(`${allNotesTwo[stringE]}`);
-          cell.appendChild(cellText);
-          row.appendChild(cell);
-          stringE++;
+          if (
+            chordsData[getRootNote()].scaleNotes.includes(allNotesTwo[stringE])
+          ) {
+            cell.setAttribute("id", "in-scale");
+            const cellText = document.createTextNode(`O`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringE++;
+          } else {
+            const cellText = document.createTextNode(`${allNotesTwo[stringE]}`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringE++;
+          }
         } else if (i === 2 && j > 0) {
-          const cellText = document.createTextNode(`${allNotesTwo[stringB]}`);
-          cell.appendChild(cellText);
-          row.appendChild(cell);
-          stringB++;
+          if (
+            chordsData[getRootNote()].scaleNotes.includes(allNotesTwo[stringB])
+          ) {
+            cell.setAttribute("id", "in-scale");
+            const cellText = document.createTextNode(`O`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringB++;
+          } else {
+            const cellText = document.createTextNode(`${allNotesTwo[stringB]}`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringB++;
+          }
         } else if (i === 3 && j > 0) {
-          const cellText = document.createTextNode(`${allNotesTwo[stringG]}`);
-          cell.appendChild(cellText);
-          row.appendChild(cell);
-          stringG++;
+          if (
+            chordsData[getRootNote()].scaleNotes.includes(allNotesTwo[stringG])
+          ) {
+            cell.setAttribute("id", "in-scale");
+            const cellText = document.createTextNode(`O`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringG++;
+          } else {
+            const cellText = document.createTextNode(`${allNotesTwo[stringG]}`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringG++;
+          }
         } else if (i === 4 && j > 0) {
-          const cellText = document.createTextNode(`${allNotesTwo[stringD]}`);
-          cell.appendChild(cellText);
-          row.appendChild(cell);
-          stringD++;
+          if (
+            chordsData[getRootNote()].scaleNotes.includes(allNotesTwo[stringD])
+          ) {
+            cell.setAttribute("id", "in-scale");
+            const cellText = document.createTextNode(`O`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringD++;
+          } else {
+            const cellText = document.createTextNode(`${allNotesTwo[stringD]}`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringD++;
+          }
         } else if (i === 5 && j > 0) {
-          const cellText = document.createTextNode(`${allNotesTwo[stringA]}`);
-          cell.appendChild(cellText);
-          row.appendChild(cell);
-          stringA++;
+          if (
+            chordsData[getRootNote()].scaleNotes.includes(allNotesTwo[stringA])
+          ) {
+            cell.setAttribute("id", "in-scale");
+            const cellText = document.createTextNode(`O`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringA++;
+          } else {
+            const cellText = document.createTextNode(`${allNotesTwo[stringA]}`);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+            stringA++;
+          }
         }
       }
 
@@ -294,6 +344,11 @@ document.addEventListener("DOMContentLoaded", function () {
     scaleDiagramDisplay.appendChild(tbl);
     // sets the border attribute of tbl to '2'
     tbl.setAttribute("border", "1");
+  }
+
+  function isInScale(note) {
+    if (chordsData[getRootNote()].scaleNotes.includes(note)) {
+    }
   }
 
   //Event listeners

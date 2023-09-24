@@ -17,3 +17,9 @@ body {
     color: white;
     font-size: 40px;
 }
+
+#in-scale {
+    background-color: black;
+    color: black;
+    min-width: 50px;
+}
