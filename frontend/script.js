@@ -122,6 +122,18 @@ document.addEventListener("DOMContentLoaded", function () {
     "F#",
     "G",
     "G#",
+    "A",
+    "A#",
+    "B",
+    "C",
+    "C#",
+    "D",
+    "D#",
+    "E",
+    "F",
+    "F#",
+    "G",
+    "G#",
   ];
 
   const majorSteps = [2, 2, 1, 2, 2, 2, 1];
@@ -179,9 +191,30 @@ document.addEventListener("DOMContentLoaded", function () {
     tbl.appendChild(tblBody);
     // appends <table> into <body>
     chordFingeringWrite.appendChild(tbl);
-    // sets the border attribute of tbl to '2'
+    // sets the border attribute of tbl to '1'
     tbl.setAttribute("border", "1");
   }
+
+  // function somethingTest() {
+  //   switch (allNotes[getRootNote()]) {
+  //     case "A":
+  //       let note = 8;
+  //       for (let j = 1; j < 25; j++) {
+  //           for (let i = 1; i < 7; i++) {
+  //               if (allNotesTwo[note] !== chordsData[getRootNote()].scaleNotes[i] ) {
+  //                   note++;
+  //               } else {
+  //                   return `o`;
+  //               }
+  //           }
+
+  //       }
+  //       break;
+
+  //     default:
+  //       console.log("default case");
+  //   }
+  // }
 
   function createTextChord() {
     chordNotesWrite.textContent = chordsData[getRootNote()].scaleNotes;
@@ -199,6 +232,12 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < 7; i++) {
       // creates a table row
       const row = document.createElement("tr");
+      //starting of each string
+      let stringE = 8;
+      let stringB = 3;
+      let stringG = 11;
+      let stringD = 6;
+      let stringA = 1;
 
       for (let j = 0; j < 25; j++) {
         // Create a <td> element and a text node, make the text
@@ -217,6 +256,31 @@ document.addEventListener("DOMContentLoaded", function () {
           const cellText = document.createTextNode(`${j}`);
           cell.appendChild(cellText);
           row.appendChild(cell);
+        } else if ((i === 1 || i === 6) && j > 0) {
+          const cellText = document.createTextNode(`${allNotesTwo[stringE]}`);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          stringE++;
+        } else if (i === 2 && j > 0) {
+          const cellText = document.createTextNode(`${allNotesTwo[stringB]}`);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          stringB++;
+        } else if (i === 3 && j > 0) {
+          const cellText = document.createTextNode(`${allNotesTwo[stringG]}`);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          stringG++;
+        } else if (i === 4 && j > 0) {
+          const cellText = document.createTextNode(`${allNotesTwo[stringD]}`);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          stringD++;
+        } else if (i === 5 && j > 0) {
+          const cellText = document.createTextNode(`${allNotesTwo[stringA]}`);
+          cell.appendChild(cellText);
+          row.appendChild(cell);
+          stringA++;
         }
       }
 
