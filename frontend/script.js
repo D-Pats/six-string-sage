@@ -195,27 +195,6 @@ document.addEventListener("DOMContentLoaded", function () {
     tbl.setAttribute("border", "1");
   }
 
-  // function somethingTest() {
-  //   switch (allNotes[getRootNote()]) {
-  //     case "A":
-  //       let note = 8;
-  //       for (let j = 1; j < 25; j++) {
-  //           for (let i = 1; i < 7; i++) {
-  //               if (allNotesTwo[note] !== chordsData[getRootNote()].scaleNotes[i] ) {
-  //                   note++;
-  //               } else {
-  //                   return `o`;
-  //               }
-  //           }
-
-  //       }
-  //       break;
-
-  //     default:
-  //       console.log("default case");
-  //   }
-  // }
-
   function createTextChord() {
     chordNotesWrite.textContent = chordsData[getRootNote()].scaleNotes;
   }
